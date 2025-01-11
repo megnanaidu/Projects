@@ -1,5 +1,4 @@
-/* Partner: ellav2
-  These functions implement a Shape hierarchy for managing geometric shapes and their properties. 
+/*  These functions implement a Shape hierarchy for managing geometric shapes and their properties. 
   The base class, Shape, is inherited by four derived classes: Circle, Rectangle, Sphere, and RectPrism. 
   Each class provides implementations for calculating the area and volume, as well as operator overloading 
   for addition and subtraction of shapes. The file also has functions to read shape data from 
@@ -97,7 +96,6 @@ private:
 //Circle
 //Please implement the member functions of Circle:
 //constructor, getArea(), getVolume(), operator+, operator-
-//@@Insert your code here
 
 class Circle : public Shape{
 public:
@@ -146,7 +144,6 @@ private:
 //Sphere
 //Please implement the member functions of Sphere:
 //constructor, getArea(), getVolume(), operator+, operator-
-//@@Insert your code here
 
 class Sphere : public Shape{
 public:
@@ -192,7 +189,7 @@ private:
 //Rectprism
 //Please implement the member functions of RectPrism:
 //constructor, getArea(), getVolume(), operator+, operator-
-//@@Insert your code here
+
 class RectPrism : public Shape{
 public:
 	//constructor intializes dimensions
@@ -252,7 +249,6 @@ private:
 // Return a list of pointers that points to the objects 
 static list<Shape*> CreateShapes(char* file_name) 
 {
-	//@@Insert your code here
 	list<Shape*> shapes;
 	ifstream file(file_name);
 
@@ -306,7 +302,6 @@ static list<Shape*> CreateShapes(char* file_name)
 // return the max area
 static double MaxArea(list<Shape*> shapes){
 	double max_area = 0;
-	//@@Insert your code here
 
 	for (auto shape : shapes) 
 	{
@@ -319,7 +314,6 @@ static double MaxArea(list<Shape*> shapes){
 // return the max volume
 static double MaxVolume(list<Shape*> shapes){
 	double max_volume = 0;
-	//@@Insert your code here
 
 	for (auto shape : shapes) 
 	{
