@@ -1,4 +1,3 @@
-//partner NetID: ellav2
 //This program consists of various functions that come together to solve a given sudoku puzzle
 //the is_val_in_row function, is_val_in_col function, and is_val_in_3x3_zone checks if each value meets the 
 //constraints of the game. If none of the conditions are met (value doesn't already exist in the row, column,
@@ -8,12 +7,6 @@
 //posssible value. This process continues until the puzzle is solved. 
 
 #include "sudoku.h"
-
-//-------------------------------------------------------------------------------------------------
-// Start here to work on your MP7
-//-------------------------------------------------------------------------------------------------
-
-// You are free to declare any private functions if needed.
 
 // Function: is_val_in_row
 // Return true if "val" already existed in ith row of array sudoku.
