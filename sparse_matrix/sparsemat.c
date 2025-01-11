@@ -1,4 +1,3 @@
-//partner: ellav2
 //all these functions together handles sparse matrices. The load_tuples function reads matrix dimensions and 
 //non-zero values from a file, creating a linked-list representation of the sparse matrix. The gv_tuples 
 //function retrieves the value at a specified row and column by traversing the list to locate the entry.
