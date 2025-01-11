@@ -1,4 +1,3 @@
-//partners: talapin2, ianchan2
 #include "game.h"
 /*The provided code implements a simplified version of the 2048 game
 with dynamic memory allocation for a customizable grid size. It includes functions to create,
@@ -8,18 +7,10 @@ determine when the game ends. The code handles user input, providing a simple te
 interacting with the game.*/
 
 game * make_game(int rows, int cols)
-/*! Create an instance of a game structure with the given number of rows
-    and columns, initializing elements to -1 and return a pointer
-    to it. (See game.h for the specification for the game data structure) 
-    The needed memory should be dynamically allocated with the malloc family
-    of functions.
-*/
 {
     //Dynamically allocate memory for game and cells (DO NOT modify this)
     game * mygame = malloc(sizeof(game));
     mygame->cells = malloc(rows*cols*sizeof(cell));
-
-    //YOUR CODE STARTS HERE:  Initialize all other variables in game struct
 
     mygame->rows = rows; // will set the row value in teh struct to the value entered
     mygame->cols = cols; // will set the col value in teh struct to the value entered
@@ -35,18 +26,11 @@ game * make_game(int rows, int cols)
 }
 
 void remake_game(game ** _cur_game_ptr,int new_rows,int new_cols)
-/*! Given a game structure that is passed by reference, change the
-	game structure to have the given number of rows and columns. Initialize
-	the score and all elements in the cells to -1. Make sure that any 
-	memory previously allocated is not lost in this function.	
-*/
 {
 	/*Frees dynamically allocated memory used by cells in previous game,
-	 then dynamically allocates memory for cells in new game.  DO NOT MODIFY.*/
+	 then dynamically allocates memory for cells in new game. */
 	free((*_cur_game_ptr)->cells);
 	(*_cur_game_ptr)->cells = malloc(new_rows*new_cols*sizeof(cell));
-
-	 //YOUR CODE STARTS HERE:  Re-initialize all other variables in game struct
 
      (*_cur_game_ptr)->rows = new_rows; // will set the row value in teh struct to the value entered
      (*_cur_game_ptr)->cols = new_cols; // will set the col value in the struct to the value entered
@@ -64,7 +48,7 @@ void remake_game(game ** _cur_game_ptr,int new_rows,int new_cols)
 
 void destroy_game(game * cur_game)
 /*! Deallocate any memory acquired with malloc associated with the given game instance.
-    This includes any substructures the game data structure contains. Do not modify this function.*/
+    This includes any substructures the game data structure contains.*/
 {
     free(cur_game->cells);
     free(cur_game);
@@ -74,12 +58,8 @@ void destroy_game(game * cur_game)
 
 cell * get_cell(game * cur_game, int row, int col)
 /*! Given a game, a row, and a column, return a pointer to the corresponding
-    cell on the game. (See game.h for game data structure specification)
-    This function should be handy for accessing game cells. Return NULL
-	if the row and col coordinates do not exist.
-*/
+    cell on the game. */
 {
-    //YOUR CODE STARTS HERE
 	
     if((row >= 0 && row < cur_game->rows) && (col >= 0 && col < cur_game->cols)) // checks valid cell
     {
@@ -90,14 +70,7 @@ cell * get_cell(game * cur_game, int row, int col)
 }
 
 int move_w(game * cur_game)
-/*!Slides all of the tiles in cur_game upwards. If a tile matches with the 
-   one above it, the tiles are merged by adding their values together. When
-   tiles merge, increase the score by the value of the new tile. A tile can 
-   not merge twice in one turn. If sliding the tiles up does not cause any 
-   cell to change value, w is an invalid move and return 0. Otherwise, return 1. 
-*/
 {
-    //YOUR CODE STARTS HERE
     int rows = cur_game->rows; // will intialize everything to values from the structs
     int cols = cur_game->cols;
     int flag = 0; // will set the move complete flag to false
@@ -178,7 +151,6 @@ int move_w(game * cur_game)
 
 int move_s(game * cur_game) //slide down
 {
-    //YOUR CODE STARTS HERE
 	 int rows = cur_game->rows;
     int cols = cur_game->cols;
     int flag = 0;
@@ -257,7 +229,6 @@ int move_s(game * cur_game) //slide down
 
 int move_a(game * cur_game) //slide left
 {
-    //YOUR CODE STARTS HERE
     int rows = cur_game->rows;
     int cols = cur_game->cols;
     int flag = 0;
@@ -337,7 +308,6 @@ int move_a(game * cur_game) //slide left
 };
 
 int move_d(game * cur_game){ //slide to the right
-    //YOUR CODE STARTS HERE
 	int rows = cur_game->rows;
     int cols = cur_game->cols;
     int flag = 0;
@@ -423,7 +393,6 @@ int legal_move_check(game * cur_game)
 	Return 1 if there are possible legal moves, 0 if there are none.
  */
 {
-    //YOUR CODE STARTS HERE
 
 	for(int i = 0; i < cur_game->cols * cur_game->rows; i++) // if there is an empty space then we can move
     {
@@ -460,8 +429,6 @@ int legal_move_check(game * cur_game)
     
 }
 
-
-/*! code below is provided and should not be changed */
 
 void rand_new_tile(game * cur_game)
 /*! insert a new tile into a random empty cell. First call rand()%(rows*cols) to get a random value between 0 and (rows*cols)-1.
