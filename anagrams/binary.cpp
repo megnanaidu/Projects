@@ -15,10 +15,7 @@ N/A
 ***/
 template <class T, class Y>
 Node<T, Y>::Node(T key, Y data){
-    /**
-        Your code goes below here
-    **/
-
+   
 	key_ = key;
   	data_ = data;
   	left = NULL;
@@ -37,9 +34,7 @@ T - returns the key of the node that is of type T
 ***/
 template <class T, class Y>
 T Node<T, Y>::getKey(){
-    /**
-        Your code goes below here
-    **/
+    
    return key_;
 }
 
@@ -55,9 +50,7 @@ Y - Returns the data of the node that is of type Y
 ***/
 template <class T, class Y>
 Y Node<T, Y>::getData(){
-    /**
-        Your code goes below here
-    **/
+    
    return data_;
 }
 
@@ -73,9 +66,6 @@ N/A
 ***/
 template <class T, class Y>
 void Node<T, Y>::setKey(T key){
-    /**
-        Your code goes below here
-    **/
 
 	key_ = key;
 }
@@ -92,9 +82,6 @@ N/A
 ***/
 template <class T, class Y>
 void Node<T, Y>::setData(Y data){
-    /**
-        Your code goes below here
-    **/
 
 	data_ = data;
 }
@@ -114,9 +101,7 @@ N/A
 
 template <class T, class Y>
 BinaryTree<T,Y>::BinaryTree(){
-    /**
-        Your code goes below here
-    **/
+   
 	root = NULL;
 }
 
@@ -134,9 +119,7 @@ N/A
 ***/
 template <class T, class Y>
 void BinaryTree<T,Y>::insert_node(Node<T,Y> *parent_node, Node<T,Y> *data){
-    /**
-        Your code goes below here
-    **/
+    
 
 	if (parent_node == NULL) 
 	{
@@ -187,9 +170,7 @@ Node<T,Y> * - returns the parent of the node you are searching for
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::find_node_parent(T key){
-    /**
-        Your code goes below here
-    **/
+    
 	return find_node_parent(root, key); //uses helper function
 }
 
@@ -206,9 +187,6 @@ Node<T,Y> * - returns the node you are searching for
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::find_node(T key){
-    /**
-        Your code goes below here
-    **/
 
 	
    return find_node(root, key); //uses helper function
@@ -227,9 +205,6 @@ N/A
 ***/
 template <class T, class Y>
 void BinaryTree<T,Y>::delete_node(T key){
-    /**
-        Your code goes below here
-    **/
 
 	root = delete_node(root, key); //uses helper function
 }
@@ -248,9 +223,7 @@ Node<T,Y> * - The new root since the root can be deleted.
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::delete_node(Node<T,Y>* node, T key){
-    /**
-        Your code goes below here
-    **/
+ 
 	if (node == NULL) //base case
 	{ 
         	return node;
@@ -312,9 +285,7 @@ Node<T,Y> * - Returns the parent of the key you were searching for
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::find_node_parent(Node<T,Y> *node,T key){
-    /**
-        Your code goes below here
-    **/
+   
 	if (node == NULL || (node->left == NULL && node->right == NULL)) //node doesn't exist
 	{ 
         	return NULL;
@@ -348,9 +319,7 @@ Node<T,Y> * - Returns the Node in the Tree
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::find_node(Node<T,Y> *node,T key){
-    /**
-        Your code goes below here
-    **/
+    
 	if (node == NULL || node->getKey() == key) 
 	{
         	return node;
@@ -378,10 +347,7 @@ Output:
 N/A
 ***/
 template <class T, class Y>
-void BinaryTree<T,Y>::pre_order(Node<T,Y> *node, std::list<Node<T,Y> > &list){
-    /**
-        Your code goes below here
-    **/
+void 
 	if (node != NULL) {
         list.push_back(*node);
         pre_order(node->left, list);
@@ -403,9 +369,7 @@ N/A
 ***/
 template <class T, class Y>
 void BinaryTree<T,Y>::in_order(Node<T,Y> *node, std::list<Node<T,Y> > &list){
-    /**
-        Your code goes below here
-    **/
+  
 
 	if (node != NULL) 
 	{
@@ -429,9 +393,7 @@ N/A
 ***/
 template <class T, class Y>
 void BinaryTree<T,Y>::post_order(Node<T,Y> *node, std::list<Node<T,Y> > &list){
-    /**
-        Your code goes below here
-    **/
+   
 
 	if (node != NULL) 
 	{
@@ -452,9 +414,7 @@ Outputs the root of the binary tree
 ***/
 template <class T, class Y>
 Node<T,Y> * BinaryTree<T,Y>::getRoot(){
-    /**
-        Your code goes below here
-    **/
+   
    return root;
 }
 
