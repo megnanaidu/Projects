@@ -1,18 +1,4 @@
-;partner: ellav2
-;
-; The code given to you here implements the histogram calculation that 
-; we developed in class.  In programming lab, we will add code that
-; prints a number in hexadecimal to the monitor.
-;
-; Your assignment for this program is to combine these two pieces of 
-; code to print the histogram to the monitor.
-;
-; If you finish your program, 
-;    ** commit a working version to your repository  **
-;    ** (and make a note of the repository version)! **
-
-
-	.ORIG	x3000		; starting address is x3000
+.ORIG	x3000		; starting address is x3000
 
 
 ;
@@ -98,15 +84,6 @@ GET_NEXT
 
 
 PRINT_HIST
-
-; you will need to insert your code to print the histogram here
-
-; do not forget to write a brief description of the approach/algorithm
-; for your implementation, list registers used in this part of the code,
-; and provide sufficient comments
-
-;Megna Naidu (NETID: megnan2)
-;09/04/2024 MP1: Printing a histogram in hex values 
 ;This entire program will take a string and print out a historgram of the 
 ;frequency of every letter, number, and other characters in hex.
 ;the first part of this program implements the histogram calculation. 
@@ -231,14 +208,12 @@ HIST_ADDR	.FILL x3F00     ; histogram starting address
 STR_START	.FILL x4000	; string starting address
 
 
-; for testing, you can use the lines below to include the string in this
-; program...
+; testing
 ;STR_START	.FILL STRING	; string starting address
 ;STRING		.STRINGZ "This is a test of the counting frequency code.  AbCd...WxYz."
 
 
 
 	; the directive below tells the assembler that the program is done
-	; (so do not write any code below it!)
 
 	.END
