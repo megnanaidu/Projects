@@ -1,8 +1,3 @@
-
-;Partner: ellav2
-;
-;Name: Megna Naidu, NETID: megnan2
-;
 ;This program is of a stack calculator. Users input the operands first, then the operator, and the program
 ;will take the two operants and perform the operation on them. This program goes through various subroutines
 ;that check the character the user entered and perform the operation that goes with it. 
@@ -34,7 +29,6 @@
  
 .ORIG x3000
 	
-;your code goes here
 AND R3, R3, #0 ;clear R3 to store one operand 
 AND R4, R4, #0 ;clear R4 to store the other operand
 
@@ -290,7 +284,6 @@ PUSH_RESULT
 ;input R3, R4
 ;out R0
 PLUS	
-;your code goes here
 	;first check if there are atleast 2 items in the stack
 	JSR CHECK_STACK
 
@@ -305,7 +298,7 @@ PLUS
 ;input R3, R4
 ;out R0
 MIN	
-;your code goes here
+
 	;first check if there are atleast 2 items in the stack
 	JSR CHECK_STACK
 	JSR POP
@@ -321,7 +314,6 @@ MIN
 ;input R3, R4
 ;out R0
 MUL	
-;your code goes here
 	;first check if there are atleast 2 items in the stack
 	JSR CHECK_STACK
 	JSR POP
@@ -343,7 +335,7 @@ MUL
 ;input R3, R4
 ;out R0
 DIV	
-;your code goes here
+
 	;first check if there are atleast 2 items in the stack
 	JSR CHECK_STACK
 	JSR POP
@@ -368,7 +360,7 @@ DIV
 ;input R3, R4
 ;out R0
 EXP
-;your code goes here
+
 	;first check if there are atleast 2 items in the stack
 	JSR CHECK_STACK
 	JSR POP
