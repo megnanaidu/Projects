@@ -13,9 +13,7 @@
  * row: the row of the cell that needs to count alive neighbors.
  * col: the col of the cell that needs to count alive neighbors.
  * Output:
- * return the number of alive neighbors. There are at most eight neighbors.
- * Pay attention for the edge and corner cells, they have less neighbors.
- */
+ * return the number of alive neighbors. There are at most eight neighbors.*/
 
 int countLiveNeighbor(int* board, int boardRowSize, int boardColSize, int row, int col){
 	//given row and column number, find that element and return the number of alive
