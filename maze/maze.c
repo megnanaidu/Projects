@@ -12,7 +12,6 @@
  * INPUTS:       fileName - character array containing the name of the maze file
  * OUTPUTS:      None 
  * RETURN:       A filled maze structure that represents the contents of the input file
- * SIDE EFFECTS: None
  */
 maze_t * createMaze(char * fileName)
 {
@@ -107,7 +106,6 @@ maze_t * createMaze(char * fileName)
  * INPUTS:        maze -- pointer to maze structure that contains all necessary information 
  * OUTPUTS:       None
  * RETURN:        None
- * SIDE EFFECTS:  All memory that has been allocated for the maze is freed
  */
 void destroyMaze(maze_t * maze)
 {
@@ -130,7 +128,6 @@ void destroyMaze(maze_t * maze)
  *               height -- height of the maze
  * OUTPUTS:      None
  * RETURN:       None
- * SIDE EFFECTS: Prints the maze to the console
  */
 void printMaze(maze_t * maze)
 {
@@ -156,7 +153,6 @@ void printMaze(maze_t * maze)
  *                       row -- the row of the cell currently being visited within the maze
  * OUTPUTS:              None
  * RETURNS:              0 if the maze is unsolvable, 1 if it is solved
- * SIDE EFFECTS:         Marks maze cells as visited or part of the solution path
  */ 
 int solveMazeDFS(maze_t * maze, int col, int row)
 {
