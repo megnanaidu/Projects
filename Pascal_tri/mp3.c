@@ -1,6 +1,4 @@
-/*partners: ellav2
-Name: Megna Naidu, NetID: megnan2
-this program first prompts the user to enter an index. After the user enters an index, the program
+/*this program first prompts the user to enter an index. After the user enters an index, the program
 computes the row of that index, following pascal's triangle's equation
 To implement this program, I first found n! because it is kept constant for every value in the row calculated 
 I then implemented a series of nested loops to find k! and (n-k)! 
